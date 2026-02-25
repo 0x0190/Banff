@@ -1,0 +1,147 @@
+._inlinkzVote
+{
+    font-size:9px;
+    font-family: sans-serif;
+
+}
+
+._inlinkzSmall
+{
+    font-size:10px;
+    font-family: sans-serif;
+
+}
+
+._inlinkzPwrby
+{
+    font-size:10px;
+    font-family: sans-serif;
+    vertical-align: bottom;
+    text-align: left;
+    border: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    border-top-style: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+}
+
+._inlinkzImg
+{
+    cursor: pointer;
+    border: none !important;
+    border-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    border-top-style: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+}
+
+._inlinkzForm
+{
+    font-size:12px;
+    font-family: sans-serif;
+}
+
+._inlinkzDelBut
+{
+    border: none;
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+    vertical-align: top;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+._inlinkzWinLeft {
+    width: 99px;
+    height: 75px;
+    background-image: url('../img/winnerLeft.jpg');
+	background-repeat:no-repeat;
+}
+
+._inlinkzWinLeftT {
+    width: 99px;
+    height: 75px;
+    background-image: url('../img/winnerLeft.png');
+	background-repeat:no-repeat;
+}
+._inlinkzWinMid {
+    width: 95px;
+    height: 75px;
+    background-image: url('../img/winnerMid.jpg');
+    vertical-align:  bottom;
+
+	background-repeat:no-repeat;
+}
+
+._inlinkzWinMidT {
+    width: 95px;
+    height: 75px;
+    background-image: url('../img/winnerMid.png');
+	background-repeat:no-repeat;
+    vertical-align:  bottom;
+
+}
+
+._inlinkzWinRight {
+    width: 83px;
+    height: 75px;
+    background-image: url('../img/winnerRight.jpg');
+	background-repeat:no-repeat;
+}
+
+._inlinkzWinRightT {
+    width: 83px;
+    height: 75px;
+    background-image: url('../img/winnerRight.png');
+	background-repeat:no-repeat;
+}
+
+._inlinkzWinNameDiv {
+    vertical-align: bottom;
+    height: 40 px;
+    color: #3399ff;
+    font-size: 11px;
+    font-family: cursive;
+    line-height: 11px;
+    text-align: center;
+    padding-bottom: 15px;
+    overflow: hidden;
+	width: 95px;
+
+}
+._inlinkzNoHover{
+    color: #55aaff;
+    text-decoration: none;
+}
+
+._inlinkzNoHover:hover {
+    text-decoration: none;
+    color: #0071cc;
+}
+

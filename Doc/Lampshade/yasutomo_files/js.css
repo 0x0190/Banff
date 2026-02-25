@@ -1,0 +1,120 @@
+var IE6 = false /*@cc_on || @_jscript_version < 5.7 @*/;
+if (!IE6) {
+window.addEvent('domready', function(){
+	var tooltips = new Tips($$('.tooltips'), {
+		initialize:function(){
+			this.fx = new Fx.Style(this.toolTip, 'opacity', {duration: 500, wait: false}).set(0);
+		},
+		onShow: function(toolTip) {
+			this.fx.start(1);
+		},
+		onHide: function(toolTip) {
+			this.fx.start(0);
+		}
+	});		
+}); 
+}// cookie functions taken from http://www.elated.com/articles/javascript-and-cookies/
+// start cookie functions
+
+function set_cookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure )
+{
+  var cookie_string = name + "=" + escape ( value );
+ 	if ( exp_y )
+ 	{
+    var expires = new Date ( exp_y, exp_m, exp_d );
+    cookie_string += "; expires=" + expires.toGMTString();
+  }
+
+  if ( path )
+ 		cookie_string += "; path=" + escape ( path );
+
+  if ( domain )
+  	cookie_string += "; domain=" + escape ( domain );
+  
+  if ( secure )
+  	cookie_string += "; secure";
+
+  document.cookie = cookie_string;
+}
+
+function delete_cookie ( cookie_name )
+{
+  var cookie_date = new Date ( );  // current date & time
+  cookie_date.setTime ( cookie_date.getTime() - 1 );
+  document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
+}
+
+function get_cookie ( cookie_name )
+{
+  var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+
+  if ( results )
+    return ( unescape ( results[2] ) );
+  else
+    return null;
+}
+// end cookie
+
+var tpModule = {
+	start: function(){
+		if($ES('tpmod')) tpModule.runToogle();
+	},
+	
+	runToogle: function(){
+	
+		var list = $$('div.tpmod-content');
+		var headings = $$('h3.show');
+		var collapsibles = new Array();
+	
+		headings.each( function(heading, i) {
+			var collapsible = new Fx.Slide(list[i], { 
+				duration: 500, 
+				transition: Fx.Transitions.Sine.easeInOut,
+				onComplete: function(request){ 
+					var h = heading;
+					if(h){
+						if(h.className == 'show') {
+							h.className = 'hide';
+							set_cookie(heading.id, 'hide')
+						} else {
+							h.className = 'show';
+							set_cookie(heading.id, 'show')
+						}
+					}
+				}
+			});
+		
+			collapsibles[i] = collapsible;
+	
+			heading.onclick = function(){
+				collapsible.toggle();
+				return false;
+			}
+		
+			//collapsible.show();
+			var sh = get_cookie(heading.id);
+			if (sh=='hide') {
+				collapsibles[i].hide();
+				heading.className = 'hide';
+			} else if (sh=='show') {
+				collapsibles[i].show();
+				heading.className = 'show';
+			} else {
+				if (typeof moduleHide!="undefined") {
+					if(moduleHide.join().indexOf(heading.id)>=0) {
+						collapsibles[i].hide();
+						heading.className = 'hide';
+					} else {
+						collapsibles[i].show();
+						heading.className = 'show';
+					}
+				} else {
+					collapsibles[i].show();
+					heading.className = 'show';
+				}
+			}
+		});
+	}
+};
+
+window.addEvent('domready', tpModule.start);

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "Banff", "Banff\Banff.avrgccproj", "{A3A1531A-2F30-4EBE-BEE9-9C716B9626AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3A1531A-2F30-4EBE-BEE9-9C716B9626AA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A3A1531A-2F30-4EBE-BEE9-9C716B9626AA}.Debug|AVR.Build.0 = Debug|AVR
+		{A3A1531A-2F30-4EBE-BEE9-9C716B9626AA}.Release|AVR.ActiveCfg = Release|AVR
+		{A3A1531A-2F30-4EBE-BEE9-9C716B9626AA}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
