@@ -212,7 +212,7 @@ int main(void){
 			if (debounce) debounce++; //Will wrap to 0 and stop counting
 			timer();
 		}
-		i++;
+		i+=2;
 	}
 	return 0; //Will never get here
 }
